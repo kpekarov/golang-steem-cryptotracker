@@ -22,7 +22,7 @@ func getPrice(t time.Time) {
 	url := "https://min-api.cryptocompare.com/data/price?fsym=" + From + "&tsyms=" + To;
 
 	w := http.Client{
-		Timeout: time.Second * 2,
+		Timeout: time.Second * 30,
 	}
 
 	req, _ := http.NewRequest(http.MethodGet, url, nil)
